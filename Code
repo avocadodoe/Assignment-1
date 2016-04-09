@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class HW1
+{
+
+	public static void main (String[] args)
+	{
+		//Problem One:
+			//Ask for the diameter of a circle from the user
+			//After getting the diameter, calculate and output the area of the circle
+			//Calculate and output the circumference
+			
+			double d, a, c, q, p;
+			q = 0.25; //quarter (constant)
+			p = 3.1415; //pi (constant)
+			
+			Scanner scan = new Scanner (System.in);
+			
+			System.out.println ("Problem #1");
+			System.out.print ("Enter the diameter of the circle: ");
+			d = scan.nextDouble(); //get the diameter
+			
+			a = q*p*d*d; //area = 1/4*pi*d^2
+			System.out.println ("The area of the circle is " + a);
+			
+			c = p*d; //circumference = pi*d
+			System.out.println ("The circumference of the circle is " + c);
+			
+		//Problem Two:
+			//Ask the user to input a value that represents a time duration in seconds
+			//Print the equivalent total amount of time as a combination of hours, minutes, and seconds
+			
+			int sec, min, hour;
+			int min_in_hour = 60;
+			int sec_in_min = 60;
+			
+			System.out.println(); //calling this with no arguments will print a blank line as space
+			System.out.println("Problem #2");
+			System.out.print ("Enter the number of seconds you want to convert: ");
+			sec = scan.nextInt(); //get the seconds
+			
+			
+			min = sec/sec_in_min;
+			sec -= min*sec_in_min;
+			
+			hour = min/min_in_hour;
+			min -= hour*min_in_hour;
+			
+			System.out.println (hour + " hours " + min + " minutes " + sec + " seconds");
+
+	}
+
+
+}
